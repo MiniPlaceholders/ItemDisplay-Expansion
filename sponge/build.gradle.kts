@@ -16,8 +16,8 @@ sponge {
         name(PluginLoaders.JAVA_PLAIN)
         version("1.0")
     }
-    plugin("example-expansion") {
-        displayName("Example-Expansion")
+    plugin("miniplaceholders-itemdisplay-expansion") {
+        displayName("MiniPlaceholders-ItemDisplay-Expansion")
         entrypoint("io.github.miniplaceholders.expansion.itemdisplay.sponge.SpongePlugin")
         description(project.description)
         links {
