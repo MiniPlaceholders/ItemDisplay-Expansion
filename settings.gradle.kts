@@ -1,14 +1,14 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-rootProject.name = "Example-Expansion"
+rootProject.name = "ItemDisplay-Expansion"
 
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
 }
 
-arrayOf("common", "paper", "velocity", "sponge").forEach {
-    include("example-expansion-$it")
+arrayOf("paper", "sponge").forEach {
+    include("itemdisplay-expansion-$it")
 
-    project(":example-expansion-$it").projectDir = file(it)
+    project(":itemdisplay-expansion-$it").projectDir = file(it)
 }
 

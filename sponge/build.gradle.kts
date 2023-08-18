@@ -7,7 +7,6 @@ plugins {
 
 dependencies {
     compileOnly(libs.miniplaceholders)
-    implementation(projects.exampleExpansionCommon)
 }
 
 sponge {
@@ -19,12 +18,12 @@ sponge {
     }
     plugin("example-expansion") {
         displayName("Example-Expansion")
-        entrypoint("io.github.miniplaceholders.expansion.example.sponge.SpongePlugin")
+        entrypoint("io.github.miniplaceholders.expansion.itemdisplay.sponge.SpongePlugin")
         description(project.description)
         links {
-            homepage("https://github.com/MiniPlaceholders/Example-Expansion")
-            source("https://github.com/MiniPlaceholders/Example-Expansion")
-            issues("https://github.com/MiniPlaceholders/Example-Expansion/issues")
+            homepage("https://github.com/MiniPlaceholders/ItemDisplay-Expansion")
+            source("https://github.com/MiniPlaceholders/ItemDisplay-Expansion")
+            issues("https://github.com/MiniPlaceholders/ItemDisplay-Expansion/issues")
         }
         contributor("4drian3d") {
             description("Lead Developer")
