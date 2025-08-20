@@ -8,14 +8,15 @@ import net.kyori.adventure.text.minimessage.tag.resolver.ArgumentQueue;
 import org.spongepowered.api.data.type.HandTypes;
 import org.spongepowered.api.entity.living.player.server.ServerPlayer;
 
-public final class MainHandPlaceholder implements AudienceTagResolver<ServerPlayer> {
+public final class GenericHandPlaceholder implements AudienceTagResolver<ServerPlayer> {
     @Override
-    public Tag tag(
-            final ServerPlayer player,
-            final ArgumentQueue queue,
-            final Context ctx
-    ) {
-        final var item = player.itemInHand(HandTypes.MAIN_HAND);
+    public Tag tag(ServerPlayer player, ArgumentQueue queue, Context ctx) {
+        final String hand = queue.popOr("You need to provide a hand argument").lowerValue();
+        final var item = player.itemInHand(switch (hand) {
+            case "main", "main_hand" -> HandTypes.MAIN_HAND;
+            case "off", "off_hand" -> HandTypes.OFF_HAND;
+            default -> throw ctx.newException("You need to provide a valid hand");
+        });
         final String name = queue.hasNext() ? queue.pop().value() : "item";
         return Tag.selfClosingInserting(Component.text().content(name).hoverEvent(item));
     }

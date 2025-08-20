@@ -2,11 +2,20 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "ItemDisplay-Expansion"
 
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
+dependencyResolutionManagement {
+    @Suppress("UnstableApiUsage")
+    repositories {
+        maven("https://repo.papermc.io/repository/maven-public/")
+        maven("https://central.sonatype.com/repository/maven-snapshots/")
+        maven("https://repo.spongepowered.org/repository/maven-public/")
+    }
 }
 
-arrayOf("paper", "sponge").forEach {
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
+
+arrayOf("common", "paper", "sponge").forEach {
     include("itemdisplay-expansion-$it")
 
     project(":itemdisplay-expansion-$it").projectDir = file(it)

@@ -1,4 +1,5 @@
 dependencies {
+    compileOnly(projects.itemdisplayExpansionCommon)
     compileOnly(libs.paper.api)
     compileOnly(libs.miniplaceholders)
 }

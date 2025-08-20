@@ -4,20 +4,21 @@ plugins {
 }
 
 dependencies {
+    compileOnly(libs.miniplaceholders)
+    compileOnly(libs.adventure.api)
+    compileOnly(libs.adventure.minimessage)
+    implementation(projects.itemdisplayExpansionCommon)
     implementation(projects.itemdisplayExpansionPaper)
     implementation(projects.itemdisplayExpansionSponge)
 }
 
-subprojects {
+allprojects {
     apply<JavaPlugin>()
-    repositories {
-        maven("https://papermc.io/repo/repository/maven-public/")
-    }
-    java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
     tasks {
         compileJava {
             options.encoding = Charsets.UTF_8.name()
-            options.release.set(17)
+            options.release.set(21)
         }
     }
 }
