@@ -7,7 +7,7 @@ sponge = "14.0.0"
 
 blossom = "2.1.0"
 shadow = "9.1.0"
-runtask = "2.1.0"
+runtask = "3.0.0"
 
 miniplaceholders = "3.0.0-SNAPSHOT"
 adventure = "4.24.0"
