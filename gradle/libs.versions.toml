@@ -9,7 +9,7 @@ blossom = "2.1.0"
 shadow = "9.1.0"
 runtask = "3.0.0"
 
-miniplaceholders = "3.0.0-SNAPSHOT"
+miniplaceholders = "3.0.1"
 adventure = "4.24.0"
 
 [libraries]
