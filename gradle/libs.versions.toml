@@ -6,7 +6,7 @@ paper = "1.21.8-R0.1-SNAPSHOT"
 sponge = "14.0.0"
 
 blossom = "1.3.1"
-shadow = "8.1.1"
+shadow = "9.1.0"
 runtask = "2.1.0"
 
 miniplaceholders = "3.0.0-SNAPSHOT"
@@ -24,6 +24,6 @@ adventure-minimessage = { group = "net.kyori", name = "adventure-text-minimessag
 [plugins]
 
 blossom = { id = "net.kyori.blossom", version.ref = "blossom" }
-shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
 runvelocity = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
 runpaper = { id = "xyz.jpenilla.run-velocity", version.ref = "runtask" }
