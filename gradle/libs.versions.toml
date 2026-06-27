@@ -10,7 +10,7 @@ shadow = "9.1.0"
 runtask = "3.0.0"
 
 miniplaceholders = "3.0.1"
-adventure = "4.24.0"
+adventure = "5.2.0"
 
 [libraries]
 
